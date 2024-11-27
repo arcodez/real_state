@@ -29,6 +29,11 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Detalle del producto",
+  description: "Product Detail Page",
+};
+
 export default function PropertyDetailPage() {
   // This would typically come from a database or API
   const property = {
