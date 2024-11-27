@@ -65,7 +65,7 @@ export default function ContactPage() {
                   </div>
                   <div className="flex items-center space-x-2">
                     <Phone className="h-5 w-5 text-gray-500" />
-                    <span>(123) 456-7890</span>
+                    <span>123 456-7890</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Mail className="h-5 w-5 text-gray-500" />

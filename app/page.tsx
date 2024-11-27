@@ -183,7 +183,7 @@ export default function RealEstateLandingPage() {
                   Ready to Find Your Perfect Home?
                 </h2>
                 <p className="mx-auto max-w-[700px] text-gray-300 md:text-xl">
-                  Let our expert agents guide you through the process. Contact us today!
+                  Let our expert agents guide you through the process. Contact us today
                 </p>
               </div>
               <div className="w-full max-w-sm space-y-2">
