@@ -14,9 +14,61 @@ import { Home, Search, Key, DollarSign, Star, Menu, X } from "lucide-react";
 import Link from "next/link";
 import Head from "next/head";
 import { CardFooterButton } from "@/components/ui/CardFooterButton";
+import PropertyCard from "@/components/ui/PropertyCard";
 
 export default function RealEstateLandingPage() {
   const [Title, setTitle] = useState("RS || Arcodez");
+
+  const PropertiesCardList = [
+    {
+      title: "House on the Lake",
+      altImage: "House exterior",
+      image:
+        "https://cdn.prod.website-files.com/5fcff9094e6ad8e939c7fa3a/641b657d3b01f349c8a72879_Blog%20Header%20Image-16.30.48.png ",
+      description: "3 beds • 2 baths • 1,500 sqft",
+      address: "123 Main St, Anytown, USA",
+    },
+    {
+      title: "Beautiful Family home",
+      altImage: "House exterior",
+      image:
+        "https://images.adsttc.com/media/images/5735/0b41/e58e/ce99/da00/004f/newsletter/IMG_0208_copy.jpg?1463094074g",
+      description: "3 beds • 2 baths • 1,500 sqft",
+      address: "123 Main St, Anytown, USA",
+    },
+    {
+      title: "Modern Apartment in New York",
+      altImage: "House exterior",
+      image:
+        "https://zillowstatic.com/bedrock/app/uploads/sites/15/Insane-Apartment-Amenities-That-Celebs-Love-1-4-HERO.jpg",
+      description: "3 beds • 2 baths • 1,500 sqft",
+      address: "123 Main St, Anytown, USA",
+    },
+    {
+      title: "Modern House in the Beach",
+      altImage: "House exterior",
+      image:
+        "https://kathryninteriors.com/wp-content/uploads/2022/03/0_2-14.jpg",
+      description: "3 beds • 2 baths • 1,500 sqft",
+      address: "123 Main St, Anytown, USA",
+    },
+    {
+      title: "Amazing Family Home",
+      altImage: "House exterior",
+      image:
+        "https://www.marketingresultsatlanta.com/wp-content/uploads/2015/06/Winward-Lot2.jpg",
+      description: "3 beds • 2 baths • 1,500 sqft",
+      address: "123 Main St, Anytown, USA",
+    },
+    {
+      title: "Dark House to Hallowen",
+      altImage: "Hallowen House",
+      image:
+        "https://imgcdn.stablediffusionweb.com/2024/9/5/4496657e-28fc-4d9d-928f-a64d40c424f0.jpg ",
+      description: "3 beds • 2 baths • 1,500 sqft",
+      address: "123 Main St, Anytown, USA",
+    },
+  ];
 
   return (
     <>
@@ -104,30 +156,9 @@ export default function RealEstateLandingPage() {
                 Featured Properties
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {[1, 2, 3].map((i) => (
-                  <Card key={i}>
-                    <CardHeader>
-                      <CardTitle>Beautiful Family Home</CardTitle>
-                      <CardDescription>
-                        123 Main St, Anytown, USA
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <img
-                        alt="House exterior"
-                        className="w-full h-48 object-cover rounded-md"
-                        height="200"
-                        src="https://images.adsttc.com/media/images/5735/0b41/e58e/ce99/da00/004f/newsletter/IMG_0208_copy.jpg?1463094074g"
-                        style={{
-                          aspectRatio: "300/200",
-                          objectFit: "cover",
-                        }}
-                        width="300"
-                      />
-                      <p className="mt-2">3 beds • 2 baths • 1,500 sqft</p>
-                    </CardContent>
-                    <CardFooter>{<CardFooterButton />}</CardFooter>
-                  </Card>
+                {PropertiesCardList.map((property, i) => (
+                  /* Aqui ira el component De property Card */
+                  <PropertyCard key={i} {...property} />
                 ))}
               </div>
             </div>
