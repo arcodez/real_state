@@ -23,8 +23,6 @@ import {
 import Link from "next/link";
 
 export default function AgentsPage() {
-  const [isOpen, setIsOpen] = useState(false);
-
   const agents = [
     {
       id: 1,
