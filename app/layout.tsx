@@ -10,6 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "RS || Arcodez",
   description: "Bienvenido a mi web Casas",
+  icons: {
+    icon: "/images/home_house_3526.png",
+  },
 };
 
 export default function RootLayout({
