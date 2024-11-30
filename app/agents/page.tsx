@@ -31,7 +31,7 @@ export default function AgentsPage() {
       phone: "(123) 456-7890",
       email: "jane.doe@acmerealestate.com",
       bio: "Jane has over 15 years of experience in the real estate market. She specializes in luxury properties and has a keen eye for interior design.",
-      image: "/placeholder.svg?height=100&width=100",
+      image: "/images/people/person.png",
       socialMedia: {
         facebook: "https://facebook.com",
         twitter: "https://twitter.com",
@@ -45,7 +45,7 @@ export default function AgentsPage() {
       phone: "(098) 765-4321",
       email: "john.smith@acmerealestate.com",
       bio: "John has been helping businesses find their perfect commercial spaces for over a decade. His knowledge of the local market is unparalleled.",
-      image: "/placeholder.svg?height=100&width=100",
+      image: "/images/people/person 1.png",
       socialMedia: {
         facebook: "https://facebook.com",
         twitter: "https://twitter.com",
@@ -59,7 +59,50 @@ export default function AgentsPage() {
       phone: "(555) 123-4567",
       email: "emily.brown@acmerealestate.com",
       bio: "Emily is passionate about helping first-time homebuyers navigate the exciting journey of purchasing their dream home. Her patience and attention to detail make her a favorite among clients.",
-      image: "/placeholder.svg?height=100&width=100",
+      image: "/images/people/person 5.png",
+      socialMedia: {
+        facebook: "https://facebook.com",
+        twitter: "https://twitter.com",
+        linkedin: "https://linkedin.com",
+      },
+    },
+    {
+      id: 4,
+      name: "Ana Adam",
+      title: "First-Time Homebuyer Expert",
+      phone: "(555) 123-4567",
+      email: "emily.brown@acmerealestate.com",
+      bio: "Emily is passionate about helping first-time homebuyers navigate the exciting journey of purchasing their dream home. Her patience and attention to detail make her a favorite among clients.",
+      image: "/images/people/person 3.png",
+      socialMedia: {
+        facebook: "https://facebook.com",
+        twitter: "https://twitter.com",
+        linkedin: "https://linkedin.com",
+      },
+    },
+    {
+      id: 5,
+      name: "Juan Peterson",
+      title: "First-Time Homebuyer Expert",
+      phone: "(555) 123-4567",
+      email: "emily.brown@acmerealestate.com",
+      bio: "Emily is passionate about helping first-time homebuyers navigate the exciting journey of purchasing their dream home. Her patience and attention to detail make her a favorite among clients.",
+      image: "/images/people/person 4.png",
+
+      socialMedia: {
+        facebook: "https://facebook.com",
+        twitter: "https://twitter.com",
+        linkedin: "https://linkedin.com",
+      },
+    },
+    {
+      id: 6,
+      name: "Ronaldo Pedro",
+      title: "First-Time Homebuyer Expert",
+      phone: "(555) 123-4567",
+      email: "emily.brown@acmerealestate.com",
+      bio: "Emily is passionate about helping first-time homebuyers navigate the exciting journey of purchasing their dream home. Her patience and attention to detail make her a favorite among clients.",
+      image: "/images/people/person 2.png",
       socialMedia: {
         facebook: "https://facebook.com",
         twitter: "https://twitter.com",
@@ -146,19 +189,6 @@ export default function AgentsPage() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-gray-500">
-          © 2023 Acme Real Estate. All rights reserved.
-        </p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Terms of Service
-          </Link>
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Privacy
-          </Link>
-        </nav>
-      </footer>
     </div>
   );
 }
