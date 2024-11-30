@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Home, Menu, X } from "lucide-react";
@@ -8,11 +9,11 @@ const Navbar = () => {
   const [activePage, setActivePage] = useState("home");
 
   const navItems = [
-    { name: "Home", href: "#" },
-    { name: "Properties", href: "#properties" },
-    { name: "Agents", href: "#agents" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Properties", href: "/#properties" },
+    { name: "Agents", href: "/agents" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -24,7 +25,7 @@ const Navbar = () => {
 
   return (
     <header className="px-4 lg:px-6 h-14 flex items-center sticky top-0 bg-background z-50 shadow-sm">
-      <Link className="flex items-center justify-center" href="#">
+      <Link className="flex items-center justify-center" href="/">
         <Home className="h-6 w-6" />
         <span className="ml-2 font-bold text-lg">Arcodez Real Estate</span>
       </Link>

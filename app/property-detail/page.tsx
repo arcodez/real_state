@@ -71,32 +71,6 @@ export default function PropertyDetailPage() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="px-4 lg:px-6 h-14 flex items-center sticky top-0 bg-background z-50 shadow-sm">
-        <Link className="flex items-center justify-center" href="/">
-          <Home className="h-6 w-6" />
-          <span className="ml-2 font-bold text-lg">Acme Real Estate</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link
-            className="text-sm font-medium hover:text-primary transition-colors"
-            href="/"
-          >
-            Home
-          </Link>
-          <Link
-            className="text-sm font-medium hover:text-primary transition-colors"
-            href="/properties"
-          >
-            Properties
-          </Link>
-          <Link
-            className="text-sm font-medium hover:text-primary transition-colors"
-            href="/contact"
-          >
-            Contact
-          </Link>
-        </nav>
-      </header>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">

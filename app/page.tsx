@@ -14,68 +14,18 @@ import { Home, Search, Key, DollarSign, Star, Menu, X } from "lucide-react";
 import Link from "next/link";
 import Head from "next/head";
 import Navbar from "@/components/Layout/Navbar";
+import { redirect } from "next/dist/server/api-utils";
 
 export default function RealEstateLandingPage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activePage, setActivePage] = useState("home");
-
-  const navItems = [
-    { name: "Home", href: "#" },
-    { name: "Properties", href: "#properties" },
-    { name: "Agents", href: "#agents" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
-  ];
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
-  const handleNavClick = (pageName: string) => {
-    setActivePage(pageName.toLowerCase());
-    setIsMenuOpen(false);
-  };
+  const [Title, setTitle] = useState("RS || Arcodez");
 
   return (
     <>
       <Head>
-        <title>Inicio || Arcodez Real State</title>
+        <title>{Title}</title>
       </Head>
+
       <div className="flex flex-col min-h-screen">
-        {/*     <header className="px-4 lg:px-6 h-14 flex items-center sticky top-0 bg-background z-50 shadow-sm">
-          <Link className="flex items-center justify-center" href="#">
-            <Home className="h-6 w-6" />
-            <span className="ml-2 font-bold text-lg">Arcodez Real Estate</span>
-          </Link>
-          <nav className="ml-auto flex items-center">
-            <Button variant="ghost" className="md:hidden" onClick={toggleMenu}>
-              {isMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </Button>
-            <div
-              className={`${
-                isMenuOpen ? "flex" : "hidden"
-              } md:flex flex-col md:flex-row absolute md:relative top-14 md:top-0 left-0 md:left-auto w-full md:w-auto bg-background md:bg-transparent p-4 md:p-0 gap-4 border-b md:border-0 shadow-md md:shadow-none`}
-            >
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  className={`text-sm font-medium hover:text-primary transition-colors ${
-                    activePage === item.name.toLowerCase() ? "text-primary" : ""
-                  }`}
-                  href={item.href}
-                  onClick={() => handleNavClick(item.name)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </nav>
-        </header> */}
-
-        <Navbar />
-
         <main className="flex-1">
           <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 relative">
             <div className="absolute inset-0 z-0">
@@ -123,7 +73,7 @@ export default function RealEstateLandingPage() {
               <div className="flex flex-col items-center space-y-4 text-center">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
-                    Find Your Dream Home
+                    Encuentra tu sueño
                   </h1>
                   <p className="mx-auto max-w-[700px] text-gray-200 md:text-xl">
                     Discover the perfect property with our extensive listings
@@ -168,7 +118,7 @@ export default function RealEstateLandingPage() {
                         alt="House exterior"
                         className="w-full h-48 object-cover rounded-md"
                         height="200"
-                        src="https://res.cloudinary.com/perryhomes/image/upload/v1706913631/PerryHomes/Blog/The%20Ultimate%20Guide%20to%20Home%20Exterior%20Design/ultimate-guide-to-home-exterior-design.jpg"
+                        src="https://images.adsttc.com/media/images/5735/0b41/e58e/ce99/da00/004f/newsletter/IMG_0208_copy.jpg?1463094074g"
                         style={{
                           aspectRatio: "300/200",
                           objectFit: "cover",
@@ -178,7 +128,9 @@ export default function RealEstateLandingPage() {
                       <p className="mt-2">3 beds • 2 baths • 1,500 sqft</p>
                     </CardContent>
                     <CardFooter>
-                      <Button className="w-full">View Details</Button>
+                      <Link className="w-full" href={"/property-detail"}>
+                        <Button className="w-full">View Details</Button>{" "}
+                      </Link>
                     </CardFooter>
                   </Card>
                 ))}
@@ -188,7 +140,7 @@ export default function RealEstateLandingPage() {
           <section id="agents" className="w-full py-12 md:py-24 lg:py-32">
             <div className="container px-4 md:px-6">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-8">
-                Our Services
+                Nuestros servicios
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <Card>

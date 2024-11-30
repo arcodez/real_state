@@ -70,57 +70,8 @@ export default function AgentsPage() {
     },
   ];
 
-  const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/properties", label: "Properties" },
-    { href: "/agents", label: "Agents" },
-    { href: "/contact", label: "Contact" },
-  ];
-
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="px-4 lg:px-6 h-14 flex items-center sticky top-0 bg-background z-50 shadow-sm">
-        <Link className="flex items-center justify-center" href="/">
-          <Home className="h-6 w-6" />
-          <span className="ml-2 font-bold text-lg">Acme Real Estate</span>
-        </Link>
-        <nav className="ml-auto hidden md:flex gap-4 sm:gap-6">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              className="text-sm font-medium hover:text-primary transition-colors"
-              href={item.href}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-        <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger asChild>
-            <Button
-              variant="ghost"
-              className="px-0 text-base hover:bg-transparent focus:ring-0 md:hidden"
-            >
-              <Menu className="h-6 w-6" />
-              <span className="sr-only">Toggle menu</span>
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="left" className="w-[300px] sm:w-[400px]">
-            <nav className="flex flex-col gap-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="block px-2 py-1 text-lg"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-          </SheetContent>
-        </Sheet>
-      </header>
       <main className="flex-1">
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
